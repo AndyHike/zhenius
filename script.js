@@ -2,14 +2,20 @@ let close = document.querySelector(".close");
 let att = document.querySelector(".attention");
 let sec = document.querySelector(".section");
 let text = document.querySelector(".text_about");
-
+console.log(sec.getBoundingClientRect().top-50);
+const  mamai = function(){
+    close.style.position = "relative";
+    att.style.height = "0px";
+    att.style.width = "0px";
+    att.style.opacity = "0"
+    
+    }
 sec.addEventListener("click", (e)=>{
     e.preventDefault();
-    console.log(sec.getBoundingClientRect().top-50);
-    sec.style.transform = `translateY(-${sec.getBoundingClientRect().top-90}px)`;
-/* if(att.style.display != "none"){
-    att.style.display = "none";
-} */
+    sec.style.transform = `translateY(${sec.style.top}px)`;
+if(att.style.display != "none"){
+   mamai();
+}
 fetch("text/alltext.JSON")
 .then(response => response.text())
 .then(data => {
@@ -20,14 +26,7 @@ fetch("text/alltext.JSON")
 })
 
 })
-close.addEventListener("click", (e)=>{
-e.preventDefault();
-close.style.position = "relative";
-att.style.height = "0px";
-att.style.width = "0px";
-att.style.opacity = "0"
-
-});
+close.addEventListener("click", mamai);
 att.addEventListener('transitionend', () => {
     att.remove();
   });

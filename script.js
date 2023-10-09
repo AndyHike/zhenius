@@ -4,9 +4,11 @@ let sec = document.querySelector(".section");
 let text = document.querySelector(".text_about");
 console.log(sec.getBoundingClientRect().top-50);
 const  mamai = function(){
-    close.style.position = "relative";
+   
     att.style.height = "0px";
     att.style.width = "0px";
+    att.style.marginTop = "0px";
+    att.style.padding = "0px";
     att.style.opacity = "0"
     
     }

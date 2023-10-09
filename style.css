@@ -69,7 +69,7 @@ line-height: normal;
 }
 .section{
     box-sizing: border-box;
-    padding: 30px 25px;
+    padding: 15px 25px;
     margin: 0 auto;
     margin-top: 20px;
     width: 360px;
@@ -79,14 +79,14 @@ flex-shrink: 0;
 background: #F5F5F5;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.section img{
+.main_pic{
     display: block;
     margin-bottom: 10px;
     width: 302px;
 height: 100px;
 flex-shrink: 0;
     border-radius: 17px;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    background: url()cover no-repeat;
 
 }
 .section h2{
@@ -99,4 +99,23 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 
+}
+.footer_sec .shows{
+    position: absolute;
+    right: 16px;
+
+}
+.footer_sec{
+   position: relative;
+}
+.footer_sec img{
+     width: 24px;
+     height: 24px;
+}
+.shows{
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
